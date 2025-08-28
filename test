@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ausbildung Energiemedizin - Entdecke die Heilkraft in dir | Munay Leben</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8A2BE2;
+            --secondary: #20B2AA;
+            --accent: #FFD700;
+            --light: #F5F5F5;
+            --dark: #333333;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(rgba(138, 43, 226, 0.8), rgba(32, 178, 170, 0.8)), url('https://images.unsplash.com/photo-158738711936極端5-940ada784de0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line極端: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 極端0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            background-color: #FFE600;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Media Logos */
+        .media-logos {
+            background-color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .media-logos h3 {
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        .logos-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .logo-item {
+            height: 60px;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .logo-item:hover {
+            opacity: 1;
+        }
+        
+        /* For Whom Section */
+        .for-whom {
+            background-color: white;
+        }
+        
+        .bullet-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50極端px;
+        }
+        
+       極端 .bullet-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .bullet-icon {
+            font-size: 24px;
+            color: var(--primary);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        /* Transformation Section */
+        .transformation {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .transformation .section-title {
+            color: white;
+        }
+        
+        .transform-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .transform-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .before-after {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .before, .after {
+            margin-bottom: 30px;
+        }
+        
+        .ba-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ba-icon {
+            margin-right: 10px;
+        }
+        
+        /* What You Learn */
+        .learn-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .learn-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .learn-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 極端0.1);
+        }
+        
+        .learn-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* About Me */
+        .about-me {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-top: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            color: white;
+        }
+        
+        .testimonials .section-title {
+            color: white極端;
+        }
+        
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+極端       }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            font-size: 5rem;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            opacity: 極端0.2;
+            font-family: Arial;
+        }
+        
+        .極端testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+        }
+        
+        /* FAQ */
+        .faq-items {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            background-color: white;
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        .faq-answer.open {
+            padding: 20px;
+            max-height: 300px;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+        
+        .form-section .section-title {
+            color: white;
+        }
+        
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.極端1);
+            padding: 40px;
+            border-radius: 10px;
+           極端max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .privacy-note {
+            font-size: 0.9rem;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            margin-top: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <極端div class="container header-content">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span>Munay Leben</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#learn">Inhalte</a></li>
+                    <li><a href="#testimonials">Erfahrungen</a></li>
+                    <li><a href="#form">Anmeld極端ung</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Entdecke die Kraft der Energiemedizin – Werde zum/zur Heiler:in deiner eigenen Lebensenergie!</h1>
+            <p>Beginne deine transformierende Ausbildung zur Energiemediziner:in und lerne, wie du dich selbst und andere tiefgehend heilen kannst – wissenschaftlich fundiert, praxisnah, voller Herz.</p>
+            <a href="#form" class="btn">Jetzt kostenlos dabei sein</a>
+        </div>
+    </section>
+
+    <!-- Media Logos -->
+    <section class="media-logos">
+        <div class="container">
+            <h3>Bekannt aus</h3>
+            <div class="logos-container">
+                <!-- Hier würden normalerweise Logos eingefügt -->
+                <div class="logo-item">[Medienlogo 1]</div>
+                <div class="logo-item">[Medienlogo 2]</div>
+                <div class極端="logo-item">[Medienlogo 3]</極端div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Whom Section -->
+    <section class="for-whom" id="about">
+        <div class="container">
+            <h2 class="section-title">Für wen ist diese Ausbildung?</h2>
+            <p class="section-subtitle">Diese Ausbildung ist perfekt für dich, wenn du echte Veränderung suchst und bereit bist, deine innere Heilkraft zu entdecken.</p>
+            
+            <div class="bullet-points">
+                <div class="bullet-item">
+                    <div class="bullet-icon">✓</div>
+                    <div>Du möchtest mehr Lebenskraft spüren und energetische Blockaden lösen</div>
+                </div>
+                <div class="bullet-item">
+                    <div class="bullet-icon">✓</div>
+                    <div>Du suchst einen neuen beruflichen oder privaten Weg mit Sinn</div>
+                </div>
+                <div class="bullet-item">
+                    <div class="bullet-icon">✓極端</div>
+                    <div>Du willst dich selbst und andere Menschen unterstützen</div>
+                </極端div>
+                <div class="bullet-item">
+                    <div class="bullet-icon">✓</div>
+                    <div>極端Du bist bereit für echte Transformation durch Energiearbeit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation">
+        <div class="container">
+            <h2 class="section-title">Deine Transformation</h2>
+            <p class="section-subtitle">Was dich erwartet, wenn du beginnst, de極端ine Energie zu harmonisieren</p>
+            
+            <div class="transform-content">
+                <div class="before-after">
+                    <div class="before">
+                        <h3 class="ba-title"><span class="ba-icon">◼</span> Vorher</h3>
+                        <p>Zweifel an dir selbst, Energieverlust, emotionale Blockaden, Unsicherheit, Gefühl der Leere</p>
+                    </div>
+                    <div class="after">
+                        <h3 class="ba-title"><span class="ba-icon">◼</span> Nachher</h3>
+                        <p>Klarheit, Lebenskraft, Freude, emotionale Freiheit, Erfüllung, Selbstvertrauen</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <p>Stell dir vor, du befreist dich von alten, belastenden Mustern, entwickelst eine starke, positive Ausstrahlung und hast Werkzeuge an der Hand, um Emotionen zu wandeln. Finde tiefe innere Ruhe und Klarheit.</p>
+                    <p style="margin-top: 20px;"><strong>Starte in dein neues Lebensgefühl – jetzt!</strong></p>
+                    <a href="#form" class="btn" style="margin-top: 30px;">Jetzt Platz sichern!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Learn -->
+    <section class="what-you-learn" id="learn">
+        <div class="container">
+            <h2 class="section-title">Das lernst du in der Ausbildung</h2>
+            <p class="section-subtitle">Ein umfassendes Curriculum, das Theorie und Praxis verbindet</p>
+            
+            <div class="learn-items">
+                <div class="極端learn-item">
+                    <div class="learn-icon">📚</div>
+                    <h3>Grundlagen der Energiemedizin</h3>
+                    <p>Wissenschaftliche Grundlagen und traditionelles Wissen vereint in einem modernen Ansatz.</p>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">🔧</div>
+                    <h3>Praktische Techniken</h3>
+                    <p>Sofort anwendbare Methoden für den Alltag, die sofort wirken.</p>
+                </div>
+                <div class="learn-item">
+                    <div class="learn-icon">🌠</div>
+                    <h3>Intuitive Wahrnehmung</h3>
+                    <p>Entfalte deine Selbstheilungskraft und lerne, feinstoffliche Energien zu spüren.</極端</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="#form" class="btn">Jetzt mehr erfahren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="about-me">
+        <div class="container">
+            <h2 class="section-title">Über mich</h2>
+            
+            <div class="about-content">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Portrait" class="profile-img">
+                </div>
+                <div>
+                    <p>Mein Name ist [Dein Name]. Vor einigen Jahren war ich selbst auf der Suche nach mehr Energie und Sinn. Durch die Energiemedizin durfte ich erleben, zu wie viel Wandel und Lebensfreude wir fähig sind, wenn wir unser Energiefeld verändern.</p>
+                    <p>Heute begleite ich voller Begeisterung Menschen auf ihrem eigenen Weg zu mehr Gesundheit und Lebenskraft. Meine Mission ist es, dieses transformative Wissen zugänglich zu machen.</p>
+                    <div class="signature">[Dein Name]</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <極端h2 class="section-title">Teilnehmerstimmen</h2>
+            <p class="section-subtitle">Echte Erfahrungen von Menschen, die den Weg bereits gegangen sind</p>
+            
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Die energetische Arbeit hat jede Facette meines Lebens berührt. Ich habe mich noch nie so in meiner Kraft gefühlt!"</p>
+                    <p class="testimonial-author">Sandra, 41</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Meine Blockaden sind endlich Vergangenheit – ich bin erfüllt und voller Lebensfreude!"</p>
+                    <p class="testimonial-author">Markus, 38</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Die Ausbildung hat mir Werkzeuge gegeben, die ich täglich anwende. Mein Leben極端 hat sich komplett verändert."</p>
+                    <p class="testimonial-author">Petra, 45</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Häufige Fragen</h2>
+            
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Für wen ist die Ausbildung geeignet?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Für alle, die sich persönlich und/oder beruflich weiterentwickeln möchten und offen für neue Energiekonzepte sind. Vorkenntnisse sind nicht erforderlich.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Wie läuft die Anmeldung ab?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Einfach das Formular unten ausfüllen – und alle Infos direkt per E-Mail erhalten. Die Teilnahme ist kostenlos und unverbindlich!
+                    </極端div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="fa極端q-question">
+                        Brauche ich Vorerfahrung?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Nein – du bekommst alle Grundlagen Schritt für Schritt vermittelt. Die Ausbildung ist sowohl für Anfänger als auch für Fortgeschrittene geeignet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <h2 class="section-title">Bereit für deine Veränderung?</h2>
+            <p class="section-subtitle">Trage dich jetzt ein und erfahre alles zur kostenlosen Energiemedizin-Ausbildung.</p>
+            
+            <div class="form-container">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Dein Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Deine E-Mail-Adresse" required>
+                    </div>
+                    <button type="submit" class="btn">Jetzt kostenlos Infos bekommen</button>
+                </form>
+                
+                <p class="privacy-note">Deine Daten werden streng vertraulich behand極端elt und nie weitergegeben. Abmeldung jederzeit möglich.</p>
+            </極端div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Munay Leben | Ausbildung Energiemedizin</p>
+                <ul class="footer-links">
+                    <極端li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('open');
+                
+                const plusSign = question.querySelector('span');
+                plusSign.textContent = plusSign.textContent === '+' ? '−' : '+';
+            });
+        });
+        
+        // Form Submission
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank für dein Interesse! Du erhältst in Kürze weitere Informationen per E-Mail.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
